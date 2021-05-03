@@ -1,0 +1,5 @@
+<p *ngIf="isFetching">Loading...</p> <!-- Using *ngIf this will be shown if isFetching = true-->
+<!-- Create Unordered List <ul> of List Ltems <li>, and we want to repeat that List Item for every element in our person list-->
+<ul *ngIf="!isFetching">    <!-- This will be shown if isFetching is = false-->
+    <li *ngFor="let person of personList" (click)="onRemovePerson(person)">{{ person }}</li> <!-- (person) is the local variable that is is the string extracted from the list of persons personList-->
+</ul>
